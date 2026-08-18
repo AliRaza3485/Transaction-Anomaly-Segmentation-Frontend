@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 // directly. This produces a plain <a> link (browser navigation) to the
 // backend's Swagger docs, not a fetch call — so it isn't subject to
 // HTTPS -> HTTP mixed-content blocking the way the predict/health calls are.
-const BACKEND_URL = process.env.API_URL ?? "http://34.236.46.109:8000";
+const BACKEND_URL = process.env.API_URL ?? "http://3.108.47.15:8000";
 
 const facts = [
   { label: "Detectors", value: "3" },

@@ -4,8 +4,9 @@
 //
 // The backend URL is read from the server-only `API_URL` env var (NOT
 // `NEXT_PUBLIC_`, so it stays server-side). Set it in .env.local — see
-// .env.example.
-const DEFAULT_BACKEND_URL = "http://34.236.46.109:8000";
+// .env.example. Falls back to the known EC2 deployment so the app works
+// out of the box; override via API_URL when the IP changes.
+const DEFAULT_BACKEND_URL = "http://3.108.47.15:8000";
 
 export function backendUrl(): string {
   return process.env.API_URL ?? DEFAULT_BACKEND_URL;
